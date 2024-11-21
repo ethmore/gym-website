@@ -11,7 +11,7 @@ interface Props {
     title: string;
 }
 
-function ProgramsCard({ imgSrc, imgAlt, href, title }: Props) {
+export default function ProgramsCard({ imgSrc, imgAlt, href, title }: Props) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -41,5 +41,3 @@ function ProgramsCard({ imgSrc, imgAlt, href, title }: Props) {
         </div>
     );
 }
-
-export default ProgramsCard;

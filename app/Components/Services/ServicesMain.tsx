@@ -3,13 +3,13 @@ import ServiceCard from "./ServiceCard";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-function Services() {
+export default function Services() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-300px 0px" });
 
     return (
         <section ref={ref} className="m-auto mt-[200px] ">
-            <h1 className="text-5xl text-center">Hizmetlerimiz</h1>
+            <h1 className="text-4xl md:text-5xl text-center">Hizmetlerimiz</h1>
             <div
                 className={`services relative flex flex-col gap-5 md:gap-0 md:flex-row w-[min(1000px,80%)] h-[1000px] md:h-[600px] mx-auto mt-5 transition-all duration-300 ${
                     isInView
@@ -42,5 +42,3 @@ function Services() {
         </section>
     );
 }
-
-export default Services;

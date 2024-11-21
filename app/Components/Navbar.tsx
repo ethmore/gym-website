@@ -3,9 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-type activeLink = "services" | "programs" | "about";
-
-const linkData = [
+type activeLink = "/hizmetlerimiz" | "/programlar" | "/hakkimizda";
+type LinkItem = {
+    inner: string;
+    href: string;
+};
+const linkData: LinkItem[] = [
     {
         inner: "Hizmetlerimiz",
         href: "/hizmetlerimiz",
@@ -29,7 +32,7 @@ interface Props {
     active?: activeLink;
 }
 
-function Navbar({ darkMode, active }: Props) {
+export default function Navbar({ darkMode, active }: Props) {
     return (
         <nav className="flex justify-center">
             <NavbarBig
@@ -135,7 +138,7 @@ function NavbarBig({ darkMode, active, className }: NavbarBigProps) {
                         <Link
                             key={index}
                             className={`transition-all hover:text-primary ${
-                                active === "services"
+                                active === item.href
                                     ? "border-neutral-600 border-b-4"
                                     : ""
                             }`}
@@ -205,7 +208,7 @@ function NavbarMobile({ className, active }: NavbarMobileProps) {
                         <Link
                             key={index}
                             className={`transition-all hover:text-primary ${
-                                active === "services"
+                                active === item.href
                                     ? "border-neutral-600 border-b-4"
                                     : ""
                             }`}
@@ -223,4 +226,3 @@ function NavbarMobile({ className, active }: NavbarMobileProps) {
         </div>
     );
 }
-export default Navbar;

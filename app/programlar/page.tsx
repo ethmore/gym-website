@@ -1,15 +1,18 @@
-import Link from "next/link";
-import Image from "next/image";
 import Navbar from "../Components/Navbar";
 import Pricing from "../Components/Pricing";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import ProgramsCard from "../Components/Programs/ProgramsCard";
+import type { Metadata } from "next";
 
-function page() {
+export const metadata: Metadata = {
+    title: "Programlar | AduroFit",
+};
+
+export default function Page() {
     return (
         <main>
-            <Navbar darkMode active="programs" />
+            <Navbar darkMode active="/programlar" />
 
             <section id="programs" className="w-[min(1100px,90%)] m-auto mt-36">
                 <h1 className="text-4xl xl:text-5xl w-fit m-auto">
@@ -42,12 +45,3 @@ function page() {
         </main>
     );
 }
-
-interface Props {
-    imgSrc: string;
-    imgAlt: string;
-    href: string;
-    title: string;
-}
-
-export default page;

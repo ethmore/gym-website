@@ -4,7 +4,7 @@ import Contact from "@/app/Components/Contact";
 import Footer from "@/app/Components/Footer";
 import Warning from "@/app/Components/Warning";
 
-function page() {
+export default function Page() {
     return (
         <main>
             <Navbar darkMode />
@@ -143,5 +143,3 @@ function page() {
         </main>
     );
 }
-
-export default page;

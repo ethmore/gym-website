@@ -3,18 +3,11 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
     --primary: rgba(255, 153, 27, 1);
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    color: var(--foreground);
-    background: var(--background);
 }
 
 main {
@@ -44,5 +37,11 @@ h3 {
     }
     to {
         --angle: 360deg;
+    }
+}
+
+@layer base {
+  :root {
+        --radius: 0.5rem;
     }
 }

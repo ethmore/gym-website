@@ -1,8 +1,17 @@
+"use client";
 import Image from "next/image";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { fromBottom, fromLeft, fromRight, toOriginal } from "./anim";
-const data = [
+import { fromBottom, fromLeft, fromRight, toOriginal } from "../../lib/anim";
+
+type WhyChooseUsItem = {
+    iconSrc: string;
+    iconAlt: string;
+    title: string;
+    content: string;
+};
+
+const data: WhyChooseUsItem[] = [
     {
         iconSrc: "/schedule-calendar-svgrepo-com.svg",
         iconAlt: "Takvim ikonu",
@@ -33,7 +42,7 @@ const data = [
     },
 ];
 
-function WhyChooseUs() {
+export default function WhyChooseUs() {
     return (
         <section className="w-[min(1100px,90%)] m-auto mt-48 ">
             <h1 className="text-4xl mb-8">Neden AduroFit? </h1>
@@ -129,5 +138,3 @@ function Card(props: Props) {
         </div>
     );
 }
-
-export default WhyChooseUs;

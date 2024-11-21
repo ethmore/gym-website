@@ -2,10 +2,9 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Partners from "./Partners";
 import { useInView } from "framer-motion";
 
-function Hero() {
+export default function Hero() {
     const ref = useRef(null);
     const isInView = useInView(ref);
 
@@ -20,8 +19,8 @@ function Hero() {
             />
             <div
                 ref={ref}
-                className="absolute top-[20%] left-[15%] text-slate-200">
-                <div className="font-teko text-[2.5rem] md:text-[4.5rem] xl:text-[5.5rem] mb-8">
+                className="absolute top-[5%] sm:top-[10%] md:top-[20%] left-0 sm:left-[15%] p-4 sm:p-0 text-slate-200">
+                <div className="font-teko text-[2.4rem] sm:text-[2.5rem] md:text-[4.5rem] xl:text-[5.5rem] mb-8">
                     <div className="overflow-hidden h-fit">
                         <h1
                             className={`transition-all duration-500 ${
@@ -45,7 +44,7 @@ function Hero() {
                 </div>
                 <div className="overflow-hidden">
                     <p
-                        className={`xl:text-lg mb-12 w-[50%] transition-all duration-1000 ${
+                        className={`text-base xl:text-lg mb-12 sm:w-[50%] transition-all duration-1000 ${
                             isInView
                                 ? "translate-x-0 opacity-100"
                                 : "-translate-x-full opacity-0"
@@ -71,9 +70,7 @@ function Hero() {
                     </div>
                 </div>
             </div>
-            <Partners className="absolute bottom-8 right-16" />
+            {/* <Partners className="absolute bottom-8 right-16" /> */}
         </section>
     );
 }
-
-export default Hero;

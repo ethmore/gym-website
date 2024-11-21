@@ -1,6 +1,14 @@
 import Image from "next/image";
 
-const data = [
+type OtherProgramItem = {
+    imgSrc: string;
+    imgAlt: string;
+    title: string;
+    description: string;
+    href: string;
+};
+
+const data: OtherProgramItem[] = [
     {
         imgSrc: "/programs2.png",
         imgAlt: "egzersiz halkalarıyla şınav çeken sarışın kadın",
@@ -26,7 +34,7 @@ const data = [
     },
 ];
 
-function OtherPrograms() {
+export default function OtherPrograms() {
     return (
         <aside className="absolute right-0 translate-x-[130%]">
             <h1 className="text-xl mb-4">Ücretsiz Programlar</h1>
@@ -75,5 +83,3 @@ function Card(props: CardProps) {
         </a>
     );
 }
-
-export default OtherPrograms;

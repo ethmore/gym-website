@@ -2,7 +2,14 @@
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-const data = [
+type PricingItem = {
+    title: string;
+    description: string;
+    benefits: string[];
+    extras: string[];
+};
+
+const data: PricingItem[] = [
     {
         title: "Başlangıç Paketi",
         description:
@@ -43,7 +50,7 @@ const data = [
     },
 ];
 
-function Pricing() {
+export default function Pricing() {
     return (
         <section className="w-[min(1100px,95%)] m-auto mt-36 lg:p-8 xl:p-0">
             <h1 className="text-center text-4xl">
@@ -147,5 +154,3 @@ function Card(props: Props) {
         </div>
     );
 }
-
-export default Pricing;

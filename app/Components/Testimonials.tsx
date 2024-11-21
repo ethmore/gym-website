@@ -4,8 +4,9 @@ import Image from "next/image";
 import image1 from "/public/testimonial1.webp";
 import image2 from "/public/testimonial2.webp";
 import image3 from "/public/testimonial3.webp";
+import useSwipe from "../../lib/useSwipe";
 
-function Testimonials() {
+export default function Testimonials() {
     const [activeIndex, setActiveIndex] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
     const dotsRef = useRef<HTMLDivElement>(null);
@@ -15,12 +16,21 @@ function Testimonials() {
     const [timer, setTimer] = useState(slideTime);
     const [hover, setHover] = useState(false);
 
-    // function prevSlide() {
-    //     setActiveIndex((index) => {
-    //         if (index === 0) return 2;
-    //         return (index = index - 1);
-    //     });
-    // }
+    const swiperHandler = useSwipe({
+        onSwipedLeft: () => {
+            nextSlide();
+        },
+        onSwipedRight: () => {
+            prevSlide();
+        },
+    });
+
+    function prevSlide() {
+        setActiveIndex((index) => {
+            if (index === 0) return 2;
+            return (index = index - 1);
+        });
+    }
 
     function nextSlide() {
         setActiveIndex((index) => {
@@ -42,9 +52,9 @@ function Testimonials() {
     }, [activeIndex, timer, hover]);
 
     useEffect(() => {
-        console.log(activeIndex);
         changePhotoStyleByIndex(activeIndex);
         changeDotStyleByIndex(activeIndex);
+        setTimer(slideTime);
     }, [activeIndex]);
 
     function changePhotoStyleByIndex(index: number) {
@@ -99,7 +109,7 @@ function Testimonials() {
                 />
             </div>
             <h2 className="text-4xl mb-4">Üyelerimizin Yorumları</h2>
-            <div className="flex overflow-hidden">
+            <div className="flex overflow-hidden" {...swiperHandler}>
                 <Testimonial_Item
                     ref={sliderRef}
                     index={activeIndex}
@@ -133,8 +143,6 @@ function Testimonials() {
         </section>
     );
 }
-
-export default Testimonials;
 
 interface ItemProps {
     ref: RefObject<HTMLDivElement>;

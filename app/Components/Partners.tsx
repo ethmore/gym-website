@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-const data = [
+type PartnerItem = {
+    imgSrc: string;
+    imgAlt: string;
+};
+
+const data: PartnerItem[] = [
     {
         imgSrc: "/partners/core_health_fitness.svg",
         imgAlt: "",
@@ -27,10 +32,10 @@ interface Props {
     className?: string;
 }
 
-function Partners(props: Props) {
+export default function Partners(props: Props) {
     return (
         <div
-            className={`flex flex-col md:flex-row gap-6 md:gap-12 justify-center ${props.className}`}>
+            className={`flex flex-wrap p-4 gap-6 md:gap-12 justify-center items-center ${props.className}`}>
             {data.map((data, index) => {
                 return (
                     <PartnersItem
@@ -56,9 +61,7 @@ function PartnersItem(props: ItemProps) {
             alt={props.imgAlt}
             width={100}
             height={50}
-            className="contrast-0 object-contain w-[50px] sm:w-[100px]"
+            className="contrast-0 object-contain w-[75px] md:w-[100px]"
         />
     );
 }
-
-export default Partners;

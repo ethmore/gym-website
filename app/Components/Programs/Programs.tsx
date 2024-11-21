@@ -1,6 +1,6 @@
 import ProgramsCard from "./ProgramsCard";
 
-function Programs() {
+export default function Programs() {
     return (
         <section id="programs" className="w-[min(1100px,90%)] m-auto mt-36">
             <h1 className="text-4xl xl:text-5xl w-fit m-auto">
@@ -29,5 +29,3 @@ function Programs() {
         </section>
     );
 }
-
-export default Programs;

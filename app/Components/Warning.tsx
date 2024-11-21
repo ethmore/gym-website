@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function Warning() {
+export default function Warning() {
     return (
         <div className="border-4 p-8 rounded-3xl mt-12">
             <div className="text-sm">
@@ -59,5 +59,3 @@ function Warning() {
         </div>
     );
 }
-
-export default Warning;

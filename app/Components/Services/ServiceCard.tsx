@@ -11,7 +11,13 @@ interface Props {
     description?: string;
 }
 
-function ServiceCard({ href, imgSrc, imgAlt, title, description }: Props) {
+export default function ServiceCard({
+    href,
+    imgSrc,
+    imgAlt,
+    title,
+    description,
+}: Props) {
     const cardRef = useRef<HTMLAnchorElement>(null);
     const glowRef = useRef<HTMLDivElement>(null);
 
@@ -75,11 +81,9 @@ function ServiceCard({ href, imgSrc, imgAlt, title, description }: Props) {
             />
             <div className="services_card_overlay" />
             <div className="absolute bottom-0 md:bottom-[-18%] left-0 p-5 text-white bg-[linear-gradient(0deg,rgba(0,0,0,0.829)_0%,rgba(0,0,0,0)_100%)] transition-all duration-500 group-hover:bottom-0">
-                <h2 className="text-4xl mb-4">{title}</h2>
-                <p className="text-xl">{description}</p>
+                <h2 className="text-2xl sm:text-4xl mb-4">{title}</h2>
+                <p className="sm:text-xl">{description}</p>
             </div>
         </Link>
     );
 }
-
-export default ServiceCard;
