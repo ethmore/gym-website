@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type OtherProgramItem = {
     imgSrc: string;
@@ -66,7 +67,7 @@ interface CardProps {
 
 function Card(props: CardProps) {
     return (
-        <a
+        <Link
             className="w-[250px] 2xl:w-[300px] border-2 rounded-lg p-2"
             href={props.href}>
             <h2 className="text-lg">{props.title}</h2>
@@ -80,6 +81,6 @@ function Card(props: CardProps) {
                 />
                 <p className="text-xs">{props.description}</p>
             </div>
-        </a>
+        </Link>
     );
 }
