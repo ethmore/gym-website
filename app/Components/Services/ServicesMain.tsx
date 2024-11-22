@@ -3,6 +3,41 @@ import ServiceCard from "./ServiceCard";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+type ServicesCard = {
+    href: string;
+    imgSrc: string;
+    imgAlt: string;
+    title: string;
+    description: string;
+};
+
+const data: ServicesCard[] = [
+    {
+        href: "/hizmetlerimiz",
+        imgSrc: "./services1.webp",
+        imgAlt: "Bir adam halter kaldırmak üzere deadlift pozisyonunda.",
+        title: "Kişisel Antrenman",
+        description:
+            "Uzman antrenörlerimizle hedeflerinize uygun antrenman programları oluşturuyoruz.",
+    },
+    {
+        href: "/hizmetlerimiz",
+        imgSrc: "./services2.webp",
+        imgAlt: "El üstü dururken bacak açma hareketi yapan bir kadın.",
+        title: "Fonksiyonel Antrenman",
+        description:
+            "Günlük hayatınızdaki hareketleri güçlendirecek dinamik ve etkili egzersiz programları sunuyoruz.",
+    },
+    {
+        href: "/hizmetlerimiz",
+        imgSrc: "./services3.webp",
+        imgAlt: "Bir kadın halatlarla egzersiz yapıyor",
+        title: "Fitness Değerlendirmesi",
+        description:
+            "Fitness seviyenizi analiz ederek, hedeflerinize yönelik en doğru programı oluşturuyoruz.",
+    },
+];
+
 export default function Services() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-300px 0px" });
@@ -17,27 +52,18 @@ export default function Services() {
                         : "translate-y-full opacity-0"
                 }`}
                 style={{ perspective: 2500 }}>
-                <ServiceCard
-                    href="/hizmetlerimiz"
-                    imgSrc="/services1.webp"
-                    imgAlt="Bir adam halter kaldırmak üzere deadlift pozisyonunda."
-                    title="Kişisel Antrenman"
-                    description="Uzman antrenörlerimizle hedeflerinize uygun antrenman programları oluşturuyoruz."
-                />
-                <ServiceCard
-                    href="/hizmetlerimiz"
-                    imgSrc="/services2.webp"
-                    imgAlt="El üstü dururken bacak açma hareketi yapan bir kadın."
-                    title="Fonksiyonel Antrenman"
-                    description="Günlük hayatınızdaki hareketleri güçlendirecek dinamik ve etkili egzersiz programları sunuyoruz."
-                />
-                <ServiceCard
-                    href="/hizmetlerimiz"
-                    imgSrc="/services3.webp"
-                    imgAlt="Bir kadın halatlarla egzersiz yapıyor"
-                    title="Fitness Değerlendirmesi"
-                    description="Fitness seviyenizi analiz ederek, hedeflerinize yönelik en doğru programı oluşturuyoruz."
-                />
+                {data.map((item, i) => {
+                    return (
+                        <ServiceCard
+                            key={i}
+                            href={item.href}
+                            imgSrc={item.imgSrc}
+                            imgAlt={item.imgAlt}
+                            title={item.title}
+                            description={item.description}
+                        />
+                    );
+                })}
             </div>
         </section>
     );
