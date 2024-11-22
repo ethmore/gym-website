@@ -11,13 +11,13 @@ const data: ProgramCard[] = [
     {
         href: "/programlar",
         imgSrc: "./programs2.webp",
-        imgAlt: "egzersiz halkalarıyla şınav çeken sarışın kadın",
+        imgAlt: "bir kutunun üzerine atlayan kadın",
         title: "Evde Fitness",
     },
     {
         href: "/programlar",
         imgSrc: "./programs1.webp",
-        imgAlt: "bir kutunun üzerine atlayan kadın",
+        imgAlt: "egzersiz halkalarıyla şınav çeken sarışın kadın",
         title: "Calisthenics",
     },
     {
