@@ -30,7 +30,7 @@ export default function MeetCrew() {
                         !isInView ? fromBottom : toOriginal
                     }`}>
                     <Image
-                        src={"/trainer1.webp"}
+                        src={"./trainer1.webp"}
                         alt=""
                         className="w-full h-[300px] object-cover rounded-xl"
                         width={600}
@@ -42,7 +42,7 @@ export default function MeetCrew() {
                         !isInView ? fromBottom : toOriginal
                     }`}>
                     <Image
-                        src={"/trainer2.webp"}
+                        src={"./trainer2.webp"}
                         alt=""
                         className="w-full h-[300px] object-cover rounded-xl"
                         width={600}
@@ -54,7 +54,7 @@ export default function MeetCrew() {
                         !isInView ? fromBottom : toOriginal
                     }`}>
                     <Image
-                        src={"/trainer3.webp"}
+                        src={"./trainer3.webp"}
                         alt=""
                         className="w-full h-[300px] object-cover rounded-xl"
                         width={600}

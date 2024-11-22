@@ -7,23 +7,23 @@ type PartnerItem = {
 
 const data: PartnerItem[] = [
     {
-        imgSrc: "/partners/core_health_fitness.svg",
+        imgSrc: "./partners/core_health_fitness.svg",
         imgAlt: "",
     },
     {
-        imgSrc: "/partners/technogym.svg",
+        imgSrc: "./partners/technogym.svg",
         imgAlt: "",
     },
     {
-        imgSrc: "/partners/life_fitness.svg",
+        imgSrc: "./partners/life_fitness.svg",
         imgAlt: "",
     },
     {
-        imgSrc: "/partners/sole_fitness.svg",
+        imgSrc: "./partners/sole_fitness.svg",
         imgAlt: "",
     },
     {
-        imgSrc: "/partners/rogue_fitness.svg",
+        imgSrc: "./partners/rogue_fitness.svg",
         imgAlt: "",
     },
 ];

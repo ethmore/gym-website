@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import logo from "/public//logo.svg";
 
 type activeLink = "/hizmetlerimiz" | "/programlar" | "/hakkimizda";
 type LinkItem = {
@@ -122,7 +123,7 @@ function NavbarBig({ darkMode, active, className }: NavbarBigProps) {
                 }`}
                 href="/">
                 <Image
-                    src={"/logo.svg"}
+                    src={logo}
                     alt="AduroFit Logo"
                     fill
                     className={
@@ -170,7 +171,7 @@ function NavbarMobile({ className, active }: NavbarMobileProps) {
                 isEnabled ? "mb-[280px]" : "mb-0"
             }`}>
             <Link className="relative w-[80px] aspect-[2/1]" href="/">
-                <Image src={"/logo.svg"} alt="AduroFit Logo" fill />
+                <Image src={logo} alt="AduroFit Logo" fill />
             </Link>
 
             {/* Hamburger */}

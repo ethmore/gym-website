@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "framer-motion";
 
+import heroImage from "/public/hero_bg.webp";
+
 export default function Hero() {
     const ref = useRef(null);
     const isInView = useInView(ref);
@@ -11,7 +13,7 @@ export default function Hero() {
     return (
         <section className="relative h-[80svh] md:h-[100svh] max-w-[2000px] mx-auto">
             <Image
-                src="/hero_bg.webp"
+                src={heroImage}
                 alt="A woman wearing sport short and sport bra doing cross crunch exercise on a bench."
                 fill
                 className="object-cover "

@@ -13,28 +13,28 @@ type WhyChooseUsItem = {
 
 const data: WhyChooseUsItem[] = [
     {
-        iconSrc: "/schedule-calendar-svgrepo-com.svg",
+        iconSrc: "./schedule-calendar-svgrepo-com.svg",
         iconAlt: "Takvim ikonu",
         title: "Kişiye Özel Programlar",
         content:
             "Hedeflerinize ve yaşam tarzınıza uygun programlarla yolunuzu aydınlatıyoruz.",
     },
     {
-        iconSrc: "/gym-svgrepo-com.svg",
+        iconSrc: "./gym-svgrepo-com.svg",
         iconAlt: "Dambıl ikonu",
         title: "Modern Ekipman ve Alanlar",
         content:
             "En güncel ekipmanlar ve geniş, ferah alanlarda konforlu bir deneyim sunuyoruz.",
     },
     {
-        iconSrc: "/people-svgrepo-com.svg",
+        iconSrc: "./people-svgrepo-com.svg",
         iconAlt: "Grup ikonu",
         title: "Destekleyici Topluluk",
         content:
             "Kendinizi güçlü hissetmeniz ve hep daha fazlasını başarmanız için motive edici bir ortam sağlıyoruz.",
     },
     {
-        iconSrc: "/pricing-workspace-svgrepo-com.svg",
+        iconSrc: "./pricing-workspace-svgrepo-com.svg",
         iconAlt: "Fiyat etiketi ikonu",
         title: "Esnek Üyelik Seçenekleri",
         content:

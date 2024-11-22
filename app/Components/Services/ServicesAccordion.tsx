@@ -60,7 +60,7 @@ export default function ServicesAccordion() {
                     !isInView ? fromRight : toOriginal
                 }`}>
                 <Image
-                    src={"/services_main.webp"}
+                    src={"./services_main.webp"}
                     alt={""}
                     fill
                     className="object-cover rounded-[60px]"

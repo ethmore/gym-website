@@ -35,7 +35,7 @@ export default function About() {
                         !isInViewTop ? fromRight : toOriginal
                     }`}>
                     <Image
-                        src={"/about1.webp"}
+                        src={"./about1.webp"}
                         alt="Bir adam kondisyon bisikletinde kardiyo yapıyor. Resmin solunda spor eğitmeni adama motivasyon veriyor. Arka planda başka bir adam kondisyon bisikletini kullanıyor"
                         fill
                         className="object-cover rounded-[60%_40%_56%_44%_/_45%_32%_68%_55%]"
@@ -51,7 +51,7 @@ export default function About() {
                         !isInViewBottom ? fromLeft : toOriginal
                     }`}>
                     <Image
-                        src={"/about2.webp"}
+                        src={"./about2.webp"}
                         alt="Spor eğitmeni, şınav çeken öğrencisinin formunu düzeltiyor."
                         fill
                         className="object-cover rounded-[65%_35%_68%_32%_/_61%_54%_46%_39%]"

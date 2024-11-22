@@ -10,7 +10,7 @@ type OtherProgramItem = {
 
 const data: OtherProgramItem[] = [
     {
-        imgSrc: "/programs2.png",
+        imgSrc: "./programs2.webp",
         imgAlt: "egzersiz halkalarıyla şınav çeken sarışın kadın",
         title: "Evde Fitness",
         description:
@@ -18,7 +18,7 @@ const data: OtherProgramItem[] = [
         href: "/programlar/evde_fitness",
     },
     {
-        imgSrc: "/programs1.png",
+        imgSrc: "./programs1.webp",
         imgAlt: "bir kutunun üzerine atlayan kadın",
         title: "Calisthenics",
         description:
@@ -26,7 +26,7 @@ const data: OtherProgramItem[] = [
         href: "/programlar/calisthenics",
     },
     {
-        imgSrc: "/programs3.png",
+        imgSrc: "./programs3.webp",
         imgAlt: "bir kadın dambıllarla bench press yapıyor, bir adam ona yardım ediyor",
         title: "Bodybuilding",
         description: "Kas kütlesi artırma, vücut kompozisyonunu iyileştirme.",

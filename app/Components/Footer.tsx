@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import logo from "/public//logo.svg";
 
 export default function Footer() {
     return (
@@ -7,7 +8,7 @@ export default function Footer() {
             <div className="max-w-[1100px] m-auto flex flex-col md:flex-row gap-8 md:gap-0 justify-between">
                 <div className="flex flex-col justify-between">
                     <Link className="relative w-[120px] aspect-[2/1]" href="/">
-                        <Image src={"/logo.svg"} alt="AduroFit Logo" fill />
+                        <Image src={logo} alt="AduroFit Logo" fill />
                     </Link>
                     <Link
                         className="bg-[conic-gradient(from_var(--angle),rgba(131,58,180,1),rgba(253,29,29,1),rgba(252,176,69,1),rgba(131,58,180,1))] animate-colorChange bg-[length:200%] bg-clip-text text-transparent opacity-75 text-sm absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap"
