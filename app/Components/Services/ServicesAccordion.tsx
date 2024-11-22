@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { fromBottom, fromRight, toOriginal } from "../../../lib/anim";
 import Accordion, { accordionData } from "../Accordion";
 import serviceImage1 from "/public/services_main.webp";
+import AnimateInView from "../AnimateInView";
 const cardData: accordionData[] = [
     {
         title: "Kişisel Antrenman",
@@ -59,12 +60,14 @@ export default function ServicesAccordion() {
                 className={`hidden md:block w-[600px] h-[600px] relative shrink-0 transition-all duration-700 ${
                     !isInView ? fromRight : toOriginal
                 }`}>
-                <Image
-                    src={serviceImage1}
-                    alt={""}
-                    fill
-                    className="object-cover rounded-[60px]"
-                />
+                <AnimateInView from="right" to="original">
+                    <Image
+                        src={serviceImage1}
+                        alt={""}
+                        fill
+                        className="object-cover rounded-[60px]"
+                    />
+                </AnimateInView>
             </div>
         </section>
     );
