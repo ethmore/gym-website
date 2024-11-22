@@ -1,11 +1,11 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 interface Props {
-    imgSrc: string;
+    imgSrc: StaticImageData;
     imgAlt: string;
     href: string;
     title: string;

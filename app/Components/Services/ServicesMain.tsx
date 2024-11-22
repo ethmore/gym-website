@@ -2,10 +2,14 @@
 import ServiceCard from "./ServiceCard";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import serviceImage1 from "/public/services1.webp";
+import serviceImage2 from "/public/services2.webp";
+import serviceImage3 from "/public/services3.webp";
+import { StaticImageData } from "next/image";
 
 type ServicesCard = {
     href: string;
-    imgSrc: string;
+    imgSrc: StaticImageData;
     imgAlt: string;
     title: string;
     description: string;
@@ -14,7 +18,7 @@ type ServicesCard = {
 const data: ServicesCard[] = [
     {
         href: "/hizmetlerimiz",
-        imgSrc: "./services1.webp",
+        imgSrc: serviceImage1,
         imgAlt: "Bir adam halter kaldırmak üzere deadlift pozisyonunda.",
         title: "Kişisel Antrenman",
         description:
@@ -22,7 +26,7 @@ const data: ServicesCard[] = [
     },
     {
         href: "/hizmetlerimiz",
-        imgSrc: "./services2.webp",
+        imgSrc: serviceImage2,
         imgAlt: "El üstü dururken bacak açma hareketi yapan bir kadın.",
         title: "Fonksiyonel Antrenman",
         description:
@@ -30,7 +34,7 @@ const data: ServicesCard[] = [
     },
     {
         href: "/hizmetlerimiz",
-        imgSrc: "./services3.webp",
+        imgSrc: serviceImage3,
         imgAlt: "Bir kadın halatlarla egzersiz yapıyor",
         title: "Fitness Değerlendirmesi",
         description:

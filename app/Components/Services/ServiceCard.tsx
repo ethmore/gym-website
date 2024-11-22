@@ -1,11 +1,11 @@
 "use client";
 import { useRef } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface Props {
     href: string;
-    imgSrc: string;
+    imgSrc: StaticImageData;
     imgAlt: string;
     title?: string;
     description?: string;

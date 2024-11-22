@@ -1,30 +1,35 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import partner1 from "/public/partners/core_health_fitness.svg";
+import partner2 from "/public/partners/technogym.svg";
+import partner3 from "/public/partners/life_fitness.svg";
+import partner4 from "/public/partners/sole_fitness.svg";
+import partner5 from "/public/partners/rogue_fitness.svg";
 
 type PartnerItem = {
-    imgSrc: string;
+    imgSrc: StaticImageData;
     imgAlt: string;
 };
 
 const data: PartnerItem[] = [
     {
-        imgSrc: "./partners/core_health_fitness.svg",
-        imgAlt: "",
+        imgSrc: partner1,
+        imgAlt: "core health",
     },
     {
-        imgSrc: "./partners/technogym.svg",
-        imgAlt: "",
+        imgSrc: partner2,
+        imgAlt: "technogym",
     },
     {
-        imgSrc: "./partners/life_fitness.svg",
-        imgAlt: "",
+        imgSrc: partner3,
+        imgAlt: "life fitness",
     },
     {
-        imgSrc: "./partners/sole_fitness.svg",
-        imgAlt: "",
+        imgSrc: partner4,
+        imgAlt: "sole fitness",
     },
     {
-        imgSrc: "./partners/rogue_fitness.svg",
-        imgAlt: "",
+        imgSrc: partner5,
+        imgAlt: "rogue fitness",
     },
 ];
 
@@ -50,7 +55,7 @@ export default function Partners(props: Props) {
 }
 
 interface ItemProps {
-    imgSrc: string;
+    imgSrc: StaticImageData;
     imgAlt: string;
 }
 

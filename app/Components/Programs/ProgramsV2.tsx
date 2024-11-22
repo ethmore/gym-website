@@ -1,23 +1,26 @@
 import React from "react";
 import { ProgramCard } from "./Programs";
 import ProgramsCard from "./ProgramsCard";
+import programImage1 from "/public/programs1.webp";
+import programImage2 from "/public/programs2.webp";
+import programImage3 from "/public/programs3.webp";
 
 const data: ProgramCard[] = [
     {
         href: "/programlar/evde_fitness",
-        imgSrc: "./programs2.webp",
+        imgSrc: programImage2,
         imgAlt: "bir kutunun üzerine atlayan kadın",
         title: "Evde Fitness",
     },
     {
         href: "/programlar/calisthenics",
-        imgSrc: "./programs1.webp",
+        imgSrc: programImage1,
         imgAlt: "egzersiz halkalarıyla şınav çeken sarışın kadın",
         title: "Calisthenics",
     },
     {
         href: "/programlar/bodybuilding",
-        imgSrc: "./programs3.webp",
+        imgSrc: programImage3,
         imgAlt: "bir kadın dambıllarla bench press yapıyor, bir adam ona yardım ediyor",
         title: "Bodybuilding",
     },
