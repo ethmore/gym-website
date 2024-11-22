@@ -1,8 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import programImage1 from "/public/programs1.webp";
+import programImage2 from "/public/programs2.webp";
+import programImage3 from "/public/programs3.webp";
 
 type OtherProgramItem = {
-    imgSrc: string;
+    imgSrc: StaticImageData;
     imgAlt: string;
     title: string;
     description: string;
@@ -11,23 +14,23 @@ type OtherProgramItem = {
 
 const data: OtherProgramItem[] = [
     {
-        imgSrc: "./programs2.webp",
-        imgAlt: "egzersiz halkalarıyla şınav çeken sarışın kadın",
+        imgSrc: programImage2,
+        imgAlt: "bir kutunun üzerine atlayan kadın",
         title: "Evde Fitness",
         description:
             "Vücut ağırlığıyla genel kuvvet ve dayanıklılık artırma, vücut şekillendirme.",
         href: "/programlar/evde_fitness",
     },
     {
-        imgSrc: "./programs1.webp",
-        imgAlt: "bir kutunun üzerine atlayan kadın",
+        imgSrc: programImage1,
+        imgAlt: "egzersiz halkalarıyla şınav çeken sarışın kadın",
         title: "Calisthenics",
         description:
             "Kas kütlesi artırma, dayanıklılık geliştirme, vücut kontrolünü iyileştirme.",
         href: "/programlar/calisthenics",
     },
     {
-        imgSrc: "./programs3.webp",
+        imgSrc: programImage3,
         imgAlt: "bir kadın dambıllarla bench press yapıyor, bir adam ona yardım ediyor",
         title: "Bodybuilding",
         description: "Kas kütlesi artırma, vücut kompozisyonunu iyileştirme.",
@@ -60,7 +63,7 @@ export default function OtherPrograms() {
 interface CardProps {
     title: string;
     description: string;
-    imgSrc: string;
+    imgSrc: StaticImageData;
     imgAlt: string;
     href: string;
 }
