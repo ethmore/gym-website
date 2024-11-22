@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { fromBottom, fromRight, toOriginal } from "../../../lib/anim";
 import Accordion, { accordionData } from "../Accordion";
-
+import serviceImage1 from "/public/services_main.webp";
 const cardData: accordionData[] = [
     {
         title: "Kişisel Antrenman",
@@ -60,7 +60,7 @@ export default function ServicesAccordion() {
                     !isInView ? fromRight : toOriginal
                 }`}>
                 <Image
-                    src={"./services_main.webp"}
+                    src={serviceImage1}
                     alt={""}
                     fill
                     className="object-cover rounded-[60px]"
