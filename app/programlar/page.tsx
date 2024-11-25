@@ -2,7 +2,7 @@ import Navbar from "../Components/Navbar";
 import Pricing from "../Components/Pricing";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
-import ProgramsV2 from "../Components/Programs/ProgramsV2";
+import Programs from "../Components/Programs/Programs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function Page() {
     return (
         <main>
             <Navbar darkMode active="/programlar" />
-            <ProgramsV2 />
+            <Programs />
             <Pricing />
             <Contact />
             <Footer />
